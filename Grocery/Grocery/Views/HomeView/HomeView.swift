@@ -19,6 +19,7 @@ struct HomeView: View {
                 if let data = vm.data {
                     BannerImage(stringImage: data.banner.image)
                     Categories(categories: data.categories)
+                    BestSales(products: data.products)
                 } else {
                     Text("Loading...")
                 }

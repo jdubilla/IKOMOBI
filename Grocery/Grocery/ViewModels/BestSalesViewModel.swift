@@ -1,5 +1,5 @@
 //
-//  CategoriesViewModel.swift
+//  BestSalesViewModel.swift
 //  Grocery
 //
 //  Created by Jean-baptiste DUBILLARD on 27/02/2024.
@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-class CategoriesViewModel: ObservableObject {
+class BestSalesViewModel: ObservableObject {
     
     @Published var images: [UIImage] = []
     
-    func fetchImages(categories: [Category]) {
+    func fetchImages(products: [Product]) {
                 
-        for category in categories {
+        for product in products {
             
-            guard let url = URL(string: category.image) else {
+            guard let url = URL(string: product.image) else {
                 return
             }
             
