@@ -13,6 +13,11 @@
 		ED7F57FE2B8E1BDA001483DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED7F57FD2B8E1BDA001483DC /* Preview Assets.xcassets */; };
 		ED7F580C2B8E2375001483DC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F580B2B8E2375001483DC /* Color.swift */; };
 		ED7F580E2B8E2713001483DC /* HeaderHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F580D2B8E2713001483DC /* HeaderHomeView.swift */; };
+		ED7F58102B8E294F001483DC /* GroceryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F580F2B8E294F001483DC /* GroceryData.swift */; };
+		ED7F58122B8E29C1001483DC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F58112B8E29C1001483DC /* APIService.swift */; };
+		ED7F58142B8E2CB1001483DC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F58132B8E2CB1001483DC /* HomeViewModel.swift */; };
+		ED7F58162B8E33E1001483DC /* BannerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F58152B8E33E1001483DC /* BannerImage.swift */; };
+		ED7F58182B8E3441001483DC /* BannerImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F58172B8E3441001483DC /* BannerImageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,11 @@
 		ED7F57FD2B8E1BDA001483DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED7F580B2B8E2375001483DC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		ED7F580D2B8E2713001483DC /* HeaderHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderHomeView.swift; sourceTree = "<group>"; };
+		ED7F580F2B8E294F001483DC /* GroceryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryData.swift; sourceTree = "<group>"; };
+		ED7F58112B8E29C1001483DC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		ED7F58132B8E2CB1001483DC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		ED7F58152B8E33E1001483DC /* BannerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerImage.swift; sourceTree = "<group>"; };
+		ED7F58172B8E3441001483DC /* BannerImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerImageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,8 @@
 		ED7F58052B8E1C46001483DC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				ED7F58132B8E2CB1001483DC /* HomeViewModel.swift */,
+				ED7F58172B8E3441001483DC /* BannerImageViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -93,6 +105,7 @@
 		ED7F58062B8E1C73001483DC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ED7F580F2B8E294F001483DC /* GroceryData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -100,6 +113,7 @@
 		ED7F58072B8E1C78001483DC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				ED7F58112B8E29C1001483DC /* APIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -117,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				ED7F580D2B8E2713001483DC /* HeaderHomeView.swift */,
+				ED7F58152B8E33E1001483DC /* BannerImage.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -201,7 +216,12 @@
 			files = (
 				ED7F580E2B8E2713001483DC /* HeaderHomeView.swift in Sources */,
 				ED7F57F92B8E1BD9001483DC /* HomeView.swift in Sources */,
+				ED7F58142B8E2CB1001483DC /* HomeViewModel.swift in Sources */,
+				ED7F58102B8E294F001483DC /* GroceryData.swift in Sources */,
 				ED7F57F72B8E1BD9001483DC /* GroceryApp.swift in Sources */,
+				ED7F58162B8E33E1001483DC /* BannerImage.swift in Sources */,
+				ED7F58122B8E29C1001483DC /* APIService.swift in Sources */,
+				ED7F58182B8E3441001483DC /* BannerImageViewModel.swift in Sources */,
 				ED7F580C2B8E2375001483DC /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

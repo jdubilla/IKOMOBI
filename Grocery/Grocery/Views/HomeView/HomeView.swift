@@ -8,9 +8,26 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @StateObject var vm = HomeViewModel()
+    
     var body: some View {
+        
         HeaderHomeView()
+        ScrollView {
+            VStack {
+                if let data = vm.data {
+                    BannerImage(stringImage: data.banner.image)
+                } else {
+                    Text("Loading...")
+                }
+            }
+            .onAppear {
+                vm.fetchData()
+            }
+        }
         Spacer()
+        
     }
 }
 
