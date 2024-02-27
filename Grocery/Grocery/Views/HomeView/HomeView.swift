@@ -18,6 +18,7 @@ struct HomeView: View {
             VStack {
                 if let data = vm.data {
                     BannerImage(stringImage: data.banner.image)
+                    Categories(categories: data.categories)
                 } else {
                     Text("Loading...")
                 }

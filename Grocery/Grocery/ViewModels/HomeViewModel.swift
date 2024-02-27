@@ -20,10 +20,8 @@ class HomeViewModel: ObservableObject {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let responseData):
-                    print(responseData)
                     self.data = responseData
                 case .failure(let error):
-                    print("ERROR")
                     self.messageError = error.localizedDescription
                     self.showAlert = true
                 }
