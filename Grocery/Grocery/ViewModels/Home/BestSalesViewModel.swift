@@ -67,6 +67,4 @@ class BestSalesViewModel: ObservableObject {
         }
     }
 
-
-
 }

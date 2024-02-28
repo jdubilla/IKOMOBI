@@ -25,7 +25,6 @@ struct BannerImage: View {
             } else {
                 Text("Loading...")
             }
-
         }.onAppear {
             vm.fetchImages(stringImage: stringImage)
         }
