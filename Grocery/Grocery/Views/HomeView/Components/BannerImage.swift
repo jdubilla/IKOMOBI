@@ -14,7 +14,7 @@ struct BannerImage: View {
     @StateObject var vm = BannerImageViewModel()
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             if let image = vm.image {
                 Image(uiImage: image)
                     .resizable()

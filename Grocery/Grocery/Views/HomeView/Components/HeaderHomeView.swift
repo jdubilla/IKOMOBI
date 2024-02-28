@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HeaderHomeView: View {
+    
+    @Binding var itemsCart: [Int64]
+    
     var body: some View {
         HStack(spacing: 0) {
             Image("user")
@@ -25,19 +28,25 @@ struct HeaderHomeView: View {
             }
             .padding(.leading, 16)
             Spacer()
-            Button(action: {
-                
-            }, label: {
-                Image("shoppingCart")
-                    .padding(11)
-                    .background(Color(UIColor(hex: "#F1F1F5")))
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-            })
+            ZStack(alignment: .topTrailing) {
+                Button(action: {
+                    
+                }, label: {
+                    Image("shoppingCart")
+                        .padding(11)
+                        .background(Color(UIColor(hex: "#F1F1F5")))
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                })
+                if self.itemsCart.count > 0 {
+                    Text(String(self.itemsCart.count))
+                        .frame(width: 24, height: 24)
+                        .foregroundColor(.white)
+                        .background(Color(UIColor(hex: "#FF0000")))
+                        .clipShape(Circle())
+                        .offset(x: 12, y: -12)
+                }
+            }
         }
         .padding(EdgeInsets(top: 14, leading: 13, bottom: 0, trailing: 28))
     }
-}
-
-#Preview {
-    HeaderHomeView()
 }

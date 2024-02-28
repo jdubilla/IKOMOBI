@@ -14,16 +14,19 @@ struct Categories: View {
     @StateObject var vm = CategoriesViewModel()
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 16) {
             Text("Catégories")
                 .font(.title3)
                 .fontWeight(.semibold)
                 .padding(.leading, 15)
             
             ScrollView(.horizontal, showsIndicators: false) {
+                    
                 HStack {
                     ForEach(vm.images.indices, id: \.self) { index in
-                        CategoryTile(image: vm.images[index], categorieName: categories[index].name)
+                        if index < categories.count {
+                            CategoryTile(image: vm.images[index], categorieName: categories[index].name)
+                        }
                     }
                 }
                 .padding(.leading, 13)

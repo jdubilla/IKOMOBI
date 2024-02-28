@@ -12,24 +12,27 @@ struct HomeView: View {
     @StateObject var vm = HomeViewModel()
     
     var body: some View {
-        
-        HeaderHomeView()
-        ScrollView {
-            VStack {
-                if let data = vm.data {
-                    BannerImage(stringImage: data.banner.image)
-                    Categories(categories: data.categories)
-                    BestSales(products: data.products)
-                } else {
-                    Text("Loading...")
+        VStack(spacing: 0) {
+            HeaderHomeView(itemsCart: $vm.itemsCart)
+            ScrollView {
+                VStack(spacing: 0) {
+                    if let data = vm.data {
+                        BannerImage(stringImage: data.banner.image)
+                        Categories(categories: data.categories)
+                        BestSales(products: data.products, itemsCart: $vm.itemsCart)
+                    } else {
+                        Text("Loading...")
+                    }
+                }
+                .onAppear {
+                    vm.fetchData()
+                    vm.loadItemsCart()
                 }
             }
-            .onAppear {
-                vm.fetchData()
-            }
         }
-        Spacer()
-        
+        .alert(isPresented: $vm.showAlert) {
+            Alert(title: Text("Error"), message: Text(vm.messageError), dismissButton: .default(Text("OK")))
+        }
     }
 }
 
