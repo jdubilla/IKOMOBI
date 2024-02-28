@@ -13,7 +13,7 @@ struct HeaderHomeView: View {
     
     var body: some View {
         HStack(spacing: 0) {
-            Image("user")
+            Image("User")
                 .resizable()
                 .frame(width: 44, height: 44)
                 .clipShape(Circle())
